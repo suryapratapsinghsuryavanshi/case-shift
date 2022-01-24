@@ -1,4 +1,4 @@
-![Case-Shift](static\logo.gif)<br>
+![Case-Shift](/static/logo.gif)<br>
 Simple npm package for converting the case from one format to another.
 
 <b>📦 Install with the help of npm or yarn</b>
@@ -11,8 +11,8 @@ yarn add case-shift
 
 ## Case Conversion
 The one case string converts the below to all the categories. Follow the further documentation.
-- [camelCase](/#camelcase)
-- [Capital Case](/#capitalcase)
+- [camelCase](./#camelcase)
+- [Capital Case](./#capitalcase)
 - [CONSTANT_CASE]()
 - [Kebab-Case]()
 - [PascalCase]()
