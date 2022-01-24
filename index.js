@@ -36,7 +36,7 @@ let camelToConstant = (camelCaseString) => {
 /**
  * A method for converting camelCase or CamelCase string to Kebab-Case string.
  * @param {string} camelCaseString camelCase string for converting in Kebab-Case.
- * @param {boolean} isCapital If you want first letter of kebab case is capital. default `true`
+ * @param {boolean} isCapital If you want the first letter of the kebab case to be capital. default `true`
  * @returns {string} `Kebab-Case` string.
  */
 let camelToKebab = (camelCaseString, isCapital = true) => {
@@ -61,7 +61,7 @@ let camelToPascal = (camelCaseString) => {
 /**
  * A method for converting camelCase or CamelCase string to snake_case string.
  * @param {string} camelCaseString camelCase string for converting in snake_case.
- * @param {boolean} isCapital If you want first letter of snake case is capital. default `true`
+ * @param {boolean} isCapital If you want the first letter of the snake case to be capital.. default `true`
  * @returns {string} `Snake_Case` string.
  */
 let camelToSnake = (camelCaseString, isCapital = true) => {
@@ -94,7 +94,7 @@ let capitalToConstant = (capitalCaseString) => {
 /**
  * A method for converting Capitaal Case string to Kebab-Case string.
  * @param {string} capitalCaseString Capitaal Case string for converting in Kebab-Case.
- * @param {boolean} isCapital If you want first letter of kebab case is capital. default `true`
+ * @param {boolean} isCapital If you want the first letter of the kebab case to be capital. default `true`
  * @returns {string} `Kebab-Case` string.
  */
 let capitalToKebab = (capitalCaseString, isCapital = true) => {
@@ -118,7 +118,7 @@ let capitalToPascal = (capitalCaseString) => {
 /**
  * A method for converting Capitaal Case string to snake_case string.
  * @param {string} capitalCaseString Capitaal Case string for converting in snake_case.
- * @param {boolean} isCapital If you want first letter of snake case is capital. default `true`
+ * @param {boolean} isCapital If you want the first letter of the snake case to be capital. default `true`
  * @returns {string} `snake_case` string.
  */
 let capitalToSnake = (capitalCaseString, isCapital = true) => {
