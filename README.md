@@ -12,7 +12,7 @@ yarn add case-shift
 ## Case Conversion
 The one case string converts the below to all the categories. Follow the further documentation.
 - [camelCase](#camelcase)
-- [Capital Case](#capitalcase)
+- [Capital Case](#capital-case)
 - [CONSTANT_CASE]()
 - [Kebab-Case]()
 - [PascalCase]()
