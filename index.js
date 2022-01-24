@@ -6,6 +6,10 @@ let camelCaseToArray = (camelCaseString) => {
 	return res.toLowerCase().split(" ");
 }
 
+let capitalCaseToArray = (capitalCaseString) => {
+	return capitalCaseString.split(" ").map(val => val.toLowerCase());
+}
+
 // One case to another case method group.
 
 /**
@@ -58,11 +62,49 @@ let camelToSnake = (camelCaseString) => {
 	return camelCaseToArray(camelCaseString).join("_");
 }
 
-
+/**
+ * A method for converting Capitaal Case string to camelCase string.
+ * @param {string} capitalCaseString Capitaal Case string for converting in camelCase.
+ * @returns {string} `camelCase` string.
+ */
 let capitalToCamel = (capitalCaseString) => {
-	let capitalCaseArray = capitalCaseString.split(" ");
-	capitalCaseArray[0] = capitalCaseArray[0].charAt(0).toLowerCase() + capitalCaseArray[0].slice(1);
-	return capitalCaseArray.join("");
+
+}
+
+/**
+ * A method for converting Capitaal Case string to CONSTENT_CASE string.
+ * @param {string} capitalCaseString Capitaal Case string for converting in CONSTENT_CASE.
+ * @returns {string} `CONSTENT_CASE` string.
+ */
+let capitalToConstant = (capitalCaseString) => {
+
+}
+
+/**
+ * A method for converting Capitaal Case string to Kebab-Case string.
+ * @param {string} capitalCaseString Capitaal Case string for converting in Kebab-Case.
+ * @returns {string} `Kebab-Case` string.
+ */
+let capitalToKebab = (capitalCaseString) => {
+
+}
+
+/**
+ * A method for converting Capitaal Case string to PascalCase string.
+ * @param {string} capitalCaseString Capitaal Case string for converting in PascalCase.
+ * @returns {string} `PascalCase` string.
+ */
+let capitalToPascal = (capitalCaseString) => {
+
+}
+
+/**
+ * A method for converting Capitaal Case string to snake_case string.
+ * @param {string} capitalCaseString Capitaal Case string for converting in snake_case.
+ * @returns {string} `snake_case` string.
+ */
+let capitalToSnake = (capitalCaseString) => {
+
 }
 
 module.exports = {
@@ -70,5 +112,10 @@ module.exports = {
 	camelToConstant,
 	camelToKebab,
 	camelToPascal,
-	camelToSnake
+	camelToSnake,
+	capitalToCamel,
+	capitalToConstant,
+	capitalToKebab,
+	capitalToPascal,
+	capitalToSnake
 }

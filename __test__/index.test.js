@@ -3,7 +3,12 @@ const {
 	camelToConstant,
 	camelToKebab,
 	camelToPascal,
-	camelToSnake
+	camelToSnake,
+	capitalToCamel,
+	capitalToConstant,
+	capitalToKebab,
+	capitalToPascal,
+	capitalToSnake,
 } = require("../index");
 
 test("Test: camelToCapital: for small camelCase", () => {
@@ -44,4 +49,8 @@ test("Test: camelToSnake: for small camelCase", () => {
 
 test("Test: camelToSnake: for capital camelCase", () => {
 	expect(camelToSnake("IsAnString")).toBe("is_an_string");
+});
+
+test("Test: capitalToCamel: for `Hello World`", () => {
+	expect(capitalToCamel("Hello World")).toBe("helloWorld");
 });
