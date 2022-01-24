@@ -1,6 +1,6 @@
 {
   "name": "case-shift",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Simple npm package for converting the case from one format to another.",
   "main": "index.js",
   "scripts": {
