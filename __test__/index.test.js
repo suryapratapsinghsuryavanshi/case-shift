@@ -27,12 +27,20 @@ test("Test: camelToConstant: for capital camelCase", () => {
 	expect(camelToConstant("IsAnString")).toBe("IS_AN_STRING");
 });
 
-test("Test: camelToKebab: for small camelCase", () => {
-	expect(camelToKebab("isAnString")).toBe("is-an-string");
+test("Test: camelToKebab | true: for small camelCase", () => {
+	expect(camelToKebab("isAnString", true)).toBe("Is-An-String");
 });
 
-test("Test: camelToKebab: for capital camelCase", () => {
-	expect(camelToKebab("IsAnString")).toBe("is-an-string");
+test("Test: camelToKebab | false: for small camelCase", () => {
+	expect(camelToKebab("isAnString", false)).toBe("is-an-string");
+});
+
+test("Test: camelToKebab | true: for capital camelCase", () => {
+	expect(camelToKebab("IsAnString", true)).toBe("Is-An-String");
+});
+
+test("Test: camelToKebab | false: for capital camelCase", () => {
+	expect(camelToKebab("IsAnString", false)).toBe("is-an-string");
 });
 
 test("Test: camelToPascal: for small camelCase", () => {
@@ -43,14 +51,44 @@ test("Test: camelToPascal: for capital camelCase", () => {
 	expect(camelToPascal("IsAnString")).toBe("IsAnString");
 });
 
-test("Test: camelToSnake: for small camelCase", () => {
-	expect(camelToSnake("isAnString")).toBe("is_an_string");
+test("Test: camelToSnake | true: for small camelCase", () => {
+	expect(camelToSnake("isAnString", true)).toBe("Is_An_String");
+});
+test("Test: camelToSnake | false: for small camelCase", () => {
+	expect(camelToSnake("isAnString", false)).toBe("is_an_string");
 });
 
-test("Test: camelToSnake: for capital camelCase", () => {
-	expect(camelToSnake("IsAnString")).toBe("is_an_string");
+test("Test: camelToSnake | true: for capital camelCase", () => {
+	expect(camelToSnake("IsAnString", true)).toBe("Is_An_String");
+});
+test("Test: camelToSnake | false: for capital camelCase", () => {
+	expect(camelToSnake("IsAnString", false)).toBe("is_an_string");
 });
 
-test("Test: capitalToCamel: for `Hello World`", () => {
-	expect(capitalToCamel("Hello World")).toBe("helloWorld");
+test("Test: capitalToCamel: for `Capital Case`", () => {
+	expect(capitalToCamel("Capital Case")).toBe("capitalCase");
+});
+
+test("Test: capitalToConstant: for `Capital Case`", () => {
+	expect(capitalToConstant("Capital Case")).toBe("CAPITAL_CASE");
+});
+
+test("Test: capitalToKebab | true: for `Capital Case`", () => {
+	expect(capitalToKebab("Capital Case", true)).toBe("Capital-Case");
+});
+
+test("Test: capitalToKebab | false: for `Capital Case`", () => {
+	expect(capitalToKebab("Capital Case", false)).toBe("capital-case");
+});
+
+test("Test: capitalToPascal: for `Capital Case`", () => {
+	expect(capitalToPascal("Capital Case")).toBe("CapitalCase");
+});
+
+test("Test: capitalToSnake | true: for `Capital Case`", () => {
+	expect(capitalToSnake("Capital Case", true)).toBe("Capital_Case");
+});
+
+test("Test: capitalToSnake | false: for `Capital Case`", () => {
+	expect(capitalToSnake("Capital Case", false)).toBe("capital_case");
 });

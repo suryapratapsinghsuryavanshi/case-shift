@@ -17,9 +17,10 @@ export function camelToConstant(camelCaseString: string): string;
 /**
  * A method for converting camelCase or CamelCase string to Kebab-Case string.
  * @param {string} camelCaseString camelCase string for converting in Kebab-Case.
+ * @param {boolean} isCapital If you want first letter of kebab case is capital. default `true`
  * @returns {string} `Kebab-Case` string.
  */
-export function camelToKebab(camelCaseString: string): string;
+export function camelToKebab(camelCaseString: string, isCapital?: boolean): string;
 
 
 /**
@@ -33,9 +34,10 @@ export function camelToPascal(camelCaseString: string): string;
 /**
  * A method for converting camelCase or CamelCase string to snake_case string.
  * @param {string} camelCaseString camelCase string for converting in snake_case.
- * @returns {string} `snake_case` string.
+ * @param {boolean} isCapital If you want first letter of snake case is capital. default `true`
+ * @returns {string} `Snake_Case` string.
  */
-export function camelToSnake(camelCaseString: string): string;
+export function camelToSnake(camelCaseString: string, isCapital?: boolean): string;
 
 
 /**
@@ -55,11 +57,12 @@ export function capitalToConstant(capitalCaseString: string): string;
 
 
 /**
-  * A method for converting Capitaal Case string to Kebab-Case string.
-  * @param {string} capitalCaseString Capitaal Case string for converting in Kebab-Case.
-  * @returns {string} `Kebab-Case` string.
-  */
-export function capitalToKebab(capitalCaseString: string): string;
+ * A method for converting Capitaal Case string to Kebab-Case string.
+ * @param {string} capitalCaseString Capitaal Case string for converting in Kebab-Case.
+ * @param {boolean} isCapital If you want first letter of kebab case is capital. default `true`
+ * @returns {string} `Kebab-Case` string.
+ */
+export function capitalToKebab(capitalCaseString: string, isCapital?: boolean): string;
 
 
 /**
@@ -71,8 +74,9 @@ export function capitalToPascal(capitalCaseString: string): string;
 
 
 /**
-  * A method for converting Capitaal Case string to snake_case string.
-  * @param {string} capitalCaseString Capitaal Case string for converting in snake_case.
-  * @returns {string} `snake_case` string.
-  */
-export function capitalToSnake(capitalCaseString: string): string;
+ * A method for converting Capitaal Case string to snake_case string.
+ * @param {string} capitalCaseString Capitaal Case string for converting in snake_case.
+ * @param {boolean} isCapital If you want first letter of snake case is capital. default `true`
+ * @returns {string} `snake_case` string.
+ */
+export function capitalToSnake(capitalCaseString: string, isCapital?: boolean): string;

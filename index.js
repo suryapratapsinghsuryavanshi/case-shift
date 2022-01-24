@@ -36,10 +36,15 @@ let camelToConstant = (camelCaseString) => {
 /**
  * A method for converting camelCase or CamelCase string to Kebab-Case string.
  * @param {string} camelCaseString camelCase string for converting in Kebab-Case.
+ * @param {boolean} isCapital If you want first letter of kebab case is capital. default `true`
  * @returns {string} `Kebab-Case` string.
  */
-let camelToKebab = (camelCaseString) => {
-	return camelCaseToArray(camelCaseString).join("-");
+let camelToKebab = (camelCaseString, isCapital = true) => {
+	if(isCapital) {
+		return camelCaseToArray(camelCaseString).map(val => val.charAt(0).toUpperCase() + val.slice(1)).join("-");
+	}else {
+		return camelCaseToArray(camelCaseString).join("-");
+	}
 }
 
 
@@ -56,10 +61,15 @@ let camelToPascal = (camelCaseString) => {
 /**
  * A method for converting camelCase or CamelCase string to snake_case string.
  * @param {string} camelCaseString camelCase string for converting in snake_case.
- * @returns {string} `snake_case` string.
+ * @param {boolean} isCapital If you want first letter of snake case is capital. default `true`
+ * @returns {string} `Snake_Case` string.
  */
-let camelToSnake = (camelCaseString) => {
-	return camelCaseToArray(camelCaseString).join("_");
+let camelToSnake = (camelCaseString, isCapital = true) => {
+	if(isCapital) {
+		return camelCaseToArray(camelCaseString).map(val => val.charAt(0).toUpperCase() + val.slice(1)).join("_");
+	}else {
+		return camelCaseToArray(camelCaseString).join("_");
+	}
 }
 
 /**
@@ -68,7 +78,8 @@ let camelToSnake = (camelCaseString) => {
  * @returns {string} `camelCase` string.
  */
 let capitalToCamel = (capitalCaseString) => {
-
+	let res = capitalCaseString.replace(/ /g, "");
+	return res.charAt(0).toLowerCase() + res.slice(1);
 }
 
 /**
@@ -77,16 +88,22 @@ let capitalToCamel = (capitalCaseString) => {
  * @returns {string} `CONSTENT_CASE` string.
  */
 let capitalToConstant = (capitalCaseString) => {
-
+	return capitalCaseToArray(capitalCaseString).map(val => val.toUpperCase()).join("_");
 }
 
 /**
  * A method for converting Capitaal Case string to Kebab-Case string.
  * @param {string} capitalCaseString Capitaal Case string for converting in Kebab-Case.
+ * @param {boolean} isCapital If you want first letter of kebab case is capital. default `true`
  * @returns {string} `Kebab-Case` string.
  */
-let capitalToKebab = (capitalCaseString) => {
-
+let capitalToKebab = (capitalCaseString, isCapital = true) => {
+	if(isCapital) {
+		return capitalCaseToArray(capitalCaseString).map(val => val.charAt(0)
+			.toUpperCase() + val.slice(1).toLowerCase()).join("-");
+	}else {
+		return capitalCaseToArray(capitalCaseString).map(val => val.toLowerCase()).join("-");
+	}
 }
 
 /**
@@ -95,16 +112,22 @@ let capitalToKebab = (capitalCaseString) => {
  * @returns {string} `PascalCase` string.
  */
 let capitalToPascal = (capitalCaseString) => {
-
+	return capitalCaseString.replace(/ /g, "");
 }
 
 /**
  * A method for converting Capitaal Case string to snake_case string.
  * @param {string} capitalCaseString Capitaal Case string for converting in snake_case.
+ * @param {boolean} isCapital If you want first letter of snake case is capital. default `true`
  * @returns {string} `snake_case` string.
  */
-let capitalToSnake = (capitalCaseString) => {
-
+let capitalToSnake = (capitalCaseString, isCapital = true) => {
+	if(isCapital) {
+		return capitalCaseToArray(capitalCaseString).map(val => val.charAt(0)
+			.toUpperCase() + val.slice(1).toLowerCase()).join("_");
+	}else {
+		return capitalCaseToArray(capitalCaseString).map(val => val.toLowerCase()).join("_");;
+	}
 }
 
 module.exports = {
