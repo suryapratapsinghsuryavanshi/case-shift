@@ -11,6 +11,9 @@ const {
 	capitalToSnake,
 } = require("../index");
 
+
+// For camelToX
+
 test("Test: camelToCapital: for small camelCase", () => {
 	expect(camelToCapital("isAnString")).toBe("Is An String");
 });
@@ -65,8 +68,15 @@ test("Test: camelToSnake | false: for capital camelCase", () => {
 	expect(camelToSnake("IsAnString", false)).toBe("is_an_string");
 });
 
+
+// For CapitalToX
+
 test("Test: capitalToCamel: for `Capital Case`", () => {
 	expect(capitalToCamel("Capital Case")).toBe("capitalCase");
+});
+
+test("Test: capitalToCamel | true: for `Capital Case`", () => {
+	expect(capitalToCamel("Capital Case", true)).toBe("CapitalCase");
 });
 
 test("Test: capitalToConstant: for `Capital Case`", () => {

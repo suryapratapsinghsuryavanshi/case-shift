@@ -75,11 +75,16 @@ let camelToSnake = (camelCaseString, isCapital = true) => {
 /**
  * A method for converting Capitaal Case string to camelCase string.
  * @param {string} capitalCaseString Capitaal Case string for converting in camelCase.
- * @returns {string} `camelCase` string.
+ * @param {boolean} isCapital if true return UpperCamelCase string, default `false`.
+ * @returns {string} `camelCase` or `UpperCamelCase` string.
  */
-let capitalToCamel = (capitalCaseString) => {
+let capitalToCamel = (capitalCaseString, isCapital = false) => {
 	let res = capitalCaseString.replace(/ /g, "");
-	return res.charAt(0).toLowerCase() + res.slice(1);
+	if(!isCapital){
+		return res.charAt(0).toLowerCase() + res.slice(1);
+	}else {
+		return res;
+	}
 }
 
 /**

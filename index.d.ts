@@ -43,9 +43,10 @@ export function camelToSnake(camelCaseString: string, isCapital?: boolean): stri
 /**
  * A method for converting Capitaal Case string to camelCase string.
  * @param {string} capitalCaseString Capitaal Case string for converting in camelCase.
- * @returns {string} `camelCase` string.
+ * @param {boolean} isCapital if true return UpperCamelCase string, default `false`.
+ * @returns {string} `camelCase` or `UpperCamelCase` string.
  */
-export function capitalToCamel(capitalCaseString: string): string;
+export function capitalToCamel(capitalCaseString: string, isCapital?: boolean): string;
 
 
 /**

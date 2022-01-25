@@ -20,7 +20,7 @@ The one case string converts the below to all the categories. Follow the further
 
 
 ### camelCase
-In this category, all the method converts the camelCase string to another category string.
+In this category, all the method converts the camelCase string to another category string. The camelCase method supports both lowerCamelCase(`isAnString`) and UpperCamelCase(`IsAnString`) strings for conversion.
 
 ```javascript
 const {
@@ -91,10 +91,12 @@ const {
 ```
 
 - <b>capitalToCamel</b><br>
-This method converts Capital Case string to camelCase case.
+This method converts Capital Case string to camelCase case. If second optional argument is true return `UpperCamleCase` string, default `false`.
 ```javascript
 console.log(capitalToCamel("Is An String"));
 // isAnString
+console.log(capitalToCamel("Is An String", true));
+// IsAnString
 ```
 <br>
 
