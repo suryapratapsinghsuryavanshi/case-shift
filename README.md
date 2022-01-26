@@ -13,7 +13,7 @@ yarn add case-shift
 The one case string converts the below to all the categories. Follow the further documentation.
 - [camelCase](#camelcase)
 - [Capital Case](#capital-case)
-- [CONSTANT_CASE]()
+- [CONSTANT_CASE](#CONSTANT_CASE)
 - [Kebab-Case]()
 - [PascalCase]()
 - [Snake_Case]()
@@ -91,7 +91,7 @@ const {
 ```
 
 - <b>capitalToCamel</b><br>
-This method converts Capital Case string to camelCase case. If second optional argument is true return `UpperCamleCase` string, default `false`.
+This method converts Capital Case string to camelCase case. If second optional argument is true return `UpperCamelCase` string, default `false`.
 ```javascript
 console.log(capitalToCamel("Is An String"));
 // isAnString
@@ -132,6 +132,66 @@ This method converts Capital Case string to snake case. If the second argument i
 console.log(capitalToSnake("Is An String"));
 // Is_An_String
 console.log(capitalToSnake("Is An String", false));
+// is_an_string
+```
+<br>
+
+
+### CONSTANT_CASE
+In this category, all the method converts the CONSTANT_CASE string to another category string.
+
+```javascript
+const {
+	constantToCamel,
+	constantToCapital,
+	constantToKebab,
+	constantToPascal,
+	constantToSnake
+} = require("case-shift");
+```
+
+- <b>constantToCamel</b><br>
+This method converts CONSTANT_CASE string to camelCase case. If second optional argument is true return `UpperCamelCase` string, default `false`.
+```javascript
+console.log(constantToCamel("IS_AN_STRING"));
+// isAnString
+console.log(constantToCamel("IS_AN_STRING", true));
+// IsAnString
+```
+<br>
+
+- <b>constantToCapital</b><br>
+This method converts CONSTANT_CASE string to Capital Case string.
+```javascript
+console.log(constantToCapital("IS_AN_STRING"));
+// Is An String
+```
+<br>
+
+- <b>constantToKebab</b><br>
+This method converts CONSTANT_CASE string to kebab case. If the second argument is true, returns capital kebab case string, else small kebab case string. Defaults are `true`.
+```javascript
+console.log(constantToKebab("IS_AN_STRING"));
+// Is-An-String
+console.log(constantToKebab("IS_AN_STRING", false));
+// is-an-string
+```
+<br>
+
+- <b>constantToPascal</b><br>
+This method converts CONSTANT_CASE string to pascal case.
+```javascript
+console.log(constantToPascal("IS_AN_STRING"));
+// IsAnString
+```
+<br>
+
+- <b>constantToSnake</b><br>
+This method converts CONSTANT_CASE string to snake case. If the second argument is true, returns capital snake case string, else small snake case string. Defaults are `true`.
+```javascript
+console.log(constantToSnake("IS_AN_STRING"));
+// Is_An_String
+console.log(constantToSnake("IS_AN_STRING", false));
 // is_an_string
 ```
 <br>
