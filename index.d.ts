@@ -81,3 +81,43 @@ export function capitalToPascal(capitalCaseString: string): string;
  * @returns {string} `snake_case` string.
  */
 export function capitalToSnake(capitalCaseString: string, isCapital?: boolean): string;
+
+
+/**
+ * A method for converting CONSTANT_CASE string to camelCase string.
+ * @param {string} constantCaseString CONSTANT_CASE string for converting in camelCase.
+ * @param {boolean} isCapital If you want the first letter of the camelCase to be capital. default `false`
+ * @returns {string} `camelCase` string.
+ */
+export function constantToCamel(constantCaseString: string, isCapital?: boolean): string;
+
+/**
+ * A method for converting CONSTANT_CASE string to Capital Case string.
+ * @param {string} constantCaseString CONSTANT_CASE string for converting in Capital Case.
+ * @param {boolean} isCapital If you want the first letter of the Capital Case to be capital. default `false`
+ * @returns {string} `Capital Case` string.
+ */
+export function constantToCapital(constantCaseString: string, isCapital?: boolean): string;
+
+/**
+ * A method for converting CONSTANT_CASE string to Kebab-Case string.
+ * @param {string} constantCaseString CONSTANT_CASE string for converting in Kebab-Case.
+ * @param {boolean} isCapital If you want the first letter of the Capital Case to be capital. default `true`
+ * @returns {string} `Kebab-Case` string.
+ */
+export function constantToKebab(constantCaseString: string, isCapital?: boolean): string;
+
+/**
+ * A method for converting CONSTANT_CASE string to PascalCase string.
+ * @param {string} constantCaseString CONSTANT_CASE string for converting in PascalCase.
+ * @returns {string} `PascalCase` string.
+ */
+export function constantToPascal(constantCaseString: string): string;
+
+/**
+ * A method for converting CONSTANT_CASE string to Snake_Case string.
+ * @param {string} constantCaseString CONSTANT_CASE string for converting in Snake_Case.
+ * @param {boolean} isCapital If you want the first letter of the Capital Case to be capital. default `true`
+ * @returns {string} `Snake_Case` string.
+ */
+export function constantToSnake(constantCaseString: string, isCapital?: boolean): string;

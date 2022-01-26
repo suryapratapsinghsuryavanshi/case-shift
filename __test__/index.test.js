@@ -9,6 +9,11 @@ const {
 	capitalToKebab,
 	capitalToPascal,
 	capitalToSnake,
+	constantToCamel,
+	constantToCapital,
+	constantToKebab,
+	constantToPascal,
+	constantToSnake
 } = require("../index");
 
 
@@ -101,4 +106,39 @@ test("Test: capitalToSnake | true: for `Capital Case`", () => {
 
 test("Test: capitalToSnake | false: for `Capital Case`", () => {
 	expect(capitalToSnake("Capital Case", false)).toBe("capital_case");
+});
+
+
+// For CONSTANT_CASE
+
+test("Test constantToCamel | true", () => {
+	expect(constantToCamel("CAPITAL_CASE", true)).toBe("CapitalCase");
+});
+
+test("Test constantToCamel | false", () => {
+	expect(constantToCamel("CAPITAL_CASE", false)).toBe("capitalCase");
+});
+
+test("Test constantToCapital", () => {
+	expect(constantToCapital("CAPITAL_CASE", true)).toBe("Capital Case");
+});
+
+test("Test constantToKebab | true", () => {
+	expect(constantToKebab("CAPITAL_CASE", true)).toBe("Capital-Case");
+});
+
+test("Test constantToKebab | false", () => {
+	expect(constantToKebab("CAPITAL_CASE", false)).toBe("capital-case");
+});
+
+test("Test constantToPascal", () => {
+	expect(constantToPascal("CAPITAL_CASE", false)).toBe("CapitalCase");
+});
+
+test("Test constantToSnake | true", () => {
+	expect(constantToSnake("CAPITAL_CASE", true)).toBe("Capital_Case");
+});
+
+test("Test constantToSnake | false", () => {
+	expect(constantToSnake("CAPITAL_CASE", false)).toBe("capital_case");
 });
