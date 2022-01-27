@@ -14,7 +14,7 @@ The one case string converts the below to all the categories. Follow the further
 - [camelCase](#camelcase)
 - [Capital Case](#capital-case)
 - [CONSTANT_CASE](#CONSTANT_CASE)
-- [Kebab-Case]()
+- [Kebab-Case](#Kebab-Case)
 - [PascalCase]()
 - [Snake_Case]()
 
