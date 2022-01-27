@@ -13,7 +13,12 @@ const {
 	constantToCapital,
 	constantToKebab,
 	constantToPascal,
-	constantToSnake
+	constantToSnake,
+	kebabToCamel,
+	kebabToCapital,
+	kebabToConstant,
+	kebabToPascal,
+	kebabToSnake
 } = require("../index");
 
 
@@ -141,4 +146,35 @@ test("Test constantToSnake | true", () => {
 
 test("Test constantToSnake | false", () => {
 	expect(constantToSnake("CONSTANT_CASE", false)).toBe("constant_case");
+});
+
+
+// For Kebab-Case
+
+test("Test kebabToCamel | true", () => {
+	expect(kebabToCamel("Kebab-Case", true)).toBe("KebabCase");
+});
+
+test("Test kebabToCamel | false", () => {
+	expect(kebabToCamel("Kebab-Case", false)).toBe("kebabCase");
+});
+
+test("Test kebabToCapital", () => {
+	expect(kebabToCapital("Kebab-Case")).toBe("Kebab Case");
+});
+
+test("Test kebabToConstant", () => {
+	expect(kebabToConstant("Kebab-Case", true)).toBe("KEBAB_CASE");
+});
+
+test("Test kebabToPascal", () => {
+	expect(kebabToPascal("Kebab-Case", false)).toBe("KebabCase");
+});
+
+test("Test kebabToSnake | true", () => {
+	expect(kebabToSnake("Kebab-Case", true)).toBe("Kebab_Case");
+});
+
+test("Test kebabToSnake | false", () => {
+	expect(kebabToSnake("Kebab-Case", false)).toBe("kebab_case");
 });

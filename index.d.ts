@@ -94,10 +94,9 @@ export function constantToCamel(constantCaseString: string, isCapital?: boolean)
 /**
  * A method for converting CONSTANT_CASE string to Capital Case string.
  * @param {string} constantCaseString CONSTANT_CASE string for converting in Capital Case.
- * @param {boolean} isCapital If you want the first letter of the Capital Case to be capital. default `false`
  * @returns {string} `Capital Case` string.
  */
-export function constantToCapital(constantCaseString: string, isCapital?: boolean): string;
+export function constantToCapital(constantCaseString: string): string;
 
 /**
  * A method for converting CONSTANT_CASE string to Kebab-Case string.
@@ -121,3 +120,40 @@ export function constantToPascal(constantCaseString: string): string;
  * @returns {string} `Snake_Case` string.
  */
 export function constantToSnake(constantCaseString: string, isCapital?: boolean): string;
+
+/**
+ * A method for converting kebab-case string to camelCase string.
+ * @param {string} kebabCaseString kebab-case string for converting in camelCase.
+ * @param {boolean} isCapital If you want the first letter of the camelCase to be capital. default `false`
+ * @returns {string} `camelCase` string.
+ */
+export function kebabToCamel(kebabCaseString: string, isCapital?: boolean): string;
+
+/**
+ * A method for converting Kebab-Case or kebab-case string to Capital Case string.
+ * @param {string} kebabCaseString Kebab-Case string for converting in capital case.
+ * @returns {string} `Capital Case` string.
+ */
+export function kebabToCapital(kebabCaseString: string): string;
+
+/**
+ * A method for converting Kebab-Case or kebab-case string to CONSTENT_CASE string.
+ * @param {string} kebabCaseString Kebab-Case string for converting in CONSTENT_CASE.
+ * @returns {string} `CONSTENT_CASE` string.
+ */
+export function kebabToConstant(kebabCaseString: string): string;
+
+/**
+ * A method for converting Kebab-Case or kebab-case string to PascalCase string.
+ * @param {string} kebabCaseString Kebab-Case string for converting in PascalCase.
+ * @returns {string} `PascalCase` string.
+ */
+export function kebabToPascal(kebabCaseString: string): string;
+
+/**
+ * A method for converting Kebab-Case or kebab-case string to Snake_Case string.
+ * @param {string} kebabCaseString kebab-case string for converting in Snake_Case.
+ * @param {boolean} isCapital If you want the first letter of the Snake_Case to be capital. default `true`
+ * @returns {string} `Snake_Case` string.
+ */
+export function kebabToSnake(kebabCaseString: string, isCapital?: boolean): string;
