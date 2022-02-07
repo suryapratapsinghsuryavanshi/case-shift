@@ -15,7 +15,7 @@ The one case string converts the below to all the categories. Follow the further
 - [Capital Case](#capital-case)
 - [CONSTANT_CASE](#CONSTANT_CASE)
 - [Kebab-Case](#Kebab-Case)
-- [PascalCase]()
+- [PascalCase](#PascalCase)
 - [Snake_Case]()
 
 
@@ -250,6 +250,66 @@ This method converts Kebab-Case string to snake_case. If the second argument is 
 console.log(kebabToSnake("Is-An-String"));
 // Is_An_String
 console.log(kebabToSnake("Is-An-String", false));
+// is_an_string
+```
+<br>
+
+
+### PascalCase
+In this category, all the method converts the PascalCase string to another category string.
+
+```javascript
+const {
+	pascalToCamel,
+	pascalToCapital,
+	pascalToConstant,
+	pascalToKebab,
+	pascalToSnake
+} = require("case-shift");
+```
+
+- <b>pascalToCamel</b><br>
+This method converts PascalCase string to camelCase case. If second optional argument is true return `UpperCamelCase` string, default `false`.
+```javascript
+console.log(pascalToCamel("IsAnString"));
+// isAnString
+console.log(pascalToCamel("IsAnString", true));
+// IsAnString
+```
+<br>
+
+- <b>pascalToCapital</b><br>
+This method converts PascalCase string to Capital Case string.
+```javascript
+console.log(pascalToCapital("IsAnString"));
+// Is An String
+```
+<br>
+
+- <b>pascalToConstant</b><br>
+This method converts PascalCase string to CONSTANT_CASE string.
+```javascript
+console.log(pascalToConstant("IsAnString"));
+// IS_AN_STRING
+```
+<br>
+
+- <b>pascalToKebab</b><br>
+This method converts PascalCase string to kebab-case string. If the second argument is true, returns capital kebab case string, else small kebab case string. Defaults are `true`.
+```javascript
+console.log(pascalToKebab("IsAnString"));
+// Is-An-String
+console.log(pascalToKebab("IsAnString", false));
+// is-an-string
+```
+<br>
+
+- <b>pascalToSnake</b><br>
+This method converts PascalCase string to snake_case. If the second argument is true, returns capital snake_case string, else small snake_case string. Defaults are `true`.
+```javascript
+console.log(pascalToSnake("IsAnString"));
+// Is_An_String
+console.log(pascalToSnake("IsAnString", false));
 // is_an_string
 ```
 <br>

@@ -6,6 +6,10 @@ let camelCaseToArray = (camelCaseString) => {
 	return res.toLowerCase().split(" ");
 }
 
+let pascalCaseToCapital = (pascalCaseString) => {
+	return pascalCaseString.replace(/([A-Z])/g, ' $1').slice(1);
+}
+
 let kebabCaseToArray = (kebabCaseString) => {
 	return kebabCaseString.replace(/-/g, "_").toUpperCase();
 }
@@ -241,6 +245,54 @@ let kebabToSnake = (kebabCaseString, isCapital = true) => {
 	return constantToSnake(kebabCaseToArray(kebabCaseString), isCapital);
 }
 
+/**
+ * A method for converting PascalCase string to camelCase string.
+ * @param {string} pascalCaseString PascalCase string for converting in camelCase.
+ * @param {boolean} isCapital if true return UpperCamelCase string, default `false`.
+ * @returns {string} `camelCase` or `UpperCamelCase` string.
+ */
+let pascalToCamel = (pascalCaseString, isCapital = false) => {
+	return capitalToCamel(pascalCaseToCapital(pascalCaseString), isCapital);
+}
+
+/**
+ * A method for converting PascalCase string to Capital Case string.
+ * @param {string} pascalCaseString PascalCase string for converting in Capital Case.
+ * @returns {string} `Capital Case` string.
+ */
+let pascalToCapital = (pascalCaseString) => {
+	return pascalCaseToCapital(pascalCaseString);
+}
+
+/**
+ * A method for converting PascalCase string to CONSTENT_CASE string.
+ * @param {string} pascalCaseString PascalCase string for converting in CONSTENT_CASE.
+ * @returns {string} `CONSTENT_CASE` string.
+ */
+let pascalToConstant = (pascalCaseString) => {
+	return capitalToConstant(pascalCaseToCapital(pascalCaseString));
+}
+
+/**
+ * A method for converting PascalCase string to Kebab-Case string.
+ * @param {string} pascalCaseString PascalCase string for converting in Kebab-Case.
+ * @param {boolean} isCapital If you want the first letter of the Capital Case to be capital. default `true`
+ * @returns {string} `Kebab-Case` string.
+ */
+let pascalToKebab = (pascalCaseString, isCapital = true) => {
+	return capitalToKebab(pascalCaseToCapital(pascalCaseString), isCapital);
+}
+
+/**
+ * A method for converting PascalCase string to Snake_Case string.
+ * @param {string} pascalCaseString PascalCase string for converting in Snake_Case.
+ * @param {boolean} isCapital If you want the first letter of the Snake_Case to be capital. default `true`
+ * @returns {string} `Snake_Case` string.
+ */
+let pascalToSnake = (pascalCaseString, isCapital = true) => {
+	return capitalToSnake(pascalCaseToCapital(pascalCaseString), isCapital);
+}
+
 module.exports = {
 	camelToCapital,
 	camelToConstant,
@@ -261,5 +313,10 @@ module.exports = {
 	kebabToCapital,
 	kebabToConstant,
 	kebabToPascal,
-	kebabToSnake
+	kebabToSnake,
+	pascalToCamel,
+	pascalToCapital,
+	pascalToConstant,
+	pascalToKebab,
+	pascalToSnake
 }

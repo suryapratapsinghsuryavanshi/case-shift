@@ -18,7 +18,12 @@ const {
 	kebabToCapital,
 	kebabToConstant,
 	kebabToPascal,
-	kebabToSnake
+	kebabToSnake,
+	pascalToCamel,
+	pascalToCapital,
+	pascalToConstant,
+	pascalToKebab,
+	pascalToSnake
 } = require("../index");
 
 
@@ -177,4 +182,39 @@ test("Test kebabToSnake | true", () => {
 
 test("Test kebabToSnake | false", () => {
 	expect(kebabToSnake("Kebab-Case", false)).toBe("kebab_case");
+});
+
+
+// For pascalToX
+
+test("Test: pascalToCamel | false: for `IsAString`", () => {
+	expect(pascalToCamel("IsAString", false)).toBe("isAString");
+});
+
+test("Test: pascalToCamel | true: for `IsAString`", () => {
+	expect(pascalToCamel("IsAString", true)).toBe("IsAString");
+});
+
+test("Test: pascalToConstant: for `IsAString`", () => {
+	expect(pascalToConstant("IsAString")).toBe("IS_A_STRING");
+});
+
+test("Test: pascalToKebab | true: for `IsAString`", () => {
+	expect(pascalToKebab("IsAString", true)).toBe("Is-A-String");
+});
+
+test("Test: pascalToKebab | false: for `IsAString`", () => {
+	expect(pascalToKebab("IsAString", false)).toBe("is-a-string");
+});
+
+test("Test: pascalToCapital: for `IsAString`", () => {
+	expect(pascalToCapital("IsAString")).toBe("Is A String");
+});
+
+test("Test: pascalToSnake | true: for `IsAString`", () => {
+	expect(pascalToSnake("IsAString", true)).toBe("Is_A_String");
+});
+
+test("Test: pascalToSnake | false: for `IsAString`", () => {
+	expect(pascalToSnake("IsAString", false)).toBe("is_a_string");
 });
