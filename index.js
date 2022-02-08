@@ -6,6 +6,10 @@ let camelCaseToArray = (camelCaseString) => {
 	return res.toLowerCase().split(" ");
 }
 
+let snakeCaseToArray = (snakeCaseString) => {
+	return snakeCaseString.replace(/-/g, "_").toUpperCase();
+}
+
 let pascalCaseToCapital = (pascalCaseString) => {
 	return pascalCaseString.replace(/([A-Z])/g, ' $1').slice(1);
 }
@@ -276,7 +280,7 @@ let pascalToConstant = (pascalCaseString) => {
 /**
  * A method for converting PascalCase string to Kebab-Case string.
  * @param {string} pascalCaseString PascalCase string for converting in Kebab-Case.
- * @param {boolean} isCapital If you want the first letter of the Capital Case to be capital. default `true`
+ * @param {boolean} isCapital If you want the first letter of the kebab-case to be capital. default `true`
  * @returns {string} `Kebab-Case` string.
  */
 let pascalToKebab = (pascalCaseString, isCapital = true) => {
@@ -291,6 +295,53 @@ let pascalToKebab = (pascalCaseString, isCapital = true) => {
  */
 let pascalToSnake = (pascalCaseString, isCapital = true) => {
 	return capitalToSnake(pascalCaseToCapital(pascalCaseString), isCapital);
+}
+
+/**
+ * A method for converting snake_case or Snake_Case string to camelCase string.
+ * @param {string} snakeCaseString snake_case or Snake_Case string for converting in camelCase.
+ * @param {boolean} isCapital If you want the first letter of the camelCase to be capital. default `false`
+ * @returns {string} `camelCase` string.
+ */
+let snakeToCamel = (snakeCaseString, isCapital = false) => {
+	return constantToCamel(snakeCaseToArray(snakeCaseString), isCapital);
+}
+
+/**
+ * A method for converting snake_case or Snake_Case string to Capital Case string.
+ * @param {string} snakeCaseString snake_case string for converting in capital case.
+ * @returns {string} `Capital Case` string.
+ */
+let snakeToCapital = (snakeCaseString) => {
+	return constantToCapital(snakeCaseToArray(snakeCaseString));
+}
+
+/**
+ * A method for converting snake_case or Snake_Case string to CONSTENT_CASE string.
+ * @param {string} snakeCaseString snake_case string for converting in CONSTENT_CASE.
+ * @returns {string} `CONSTENT_CASE` string.
+ */
+let snakeToConstant = (snakeCaseString) => {
+	return snakeCaseToArray(snakeCaseString);
+}
+
+/**
+ * A method for converting snake_case or Snake_Case string to Kebab-Case string.
+ * @param {string} snakeCaseString snake_case string for converting in Kebab-Case.
+ * @param {boolean} isCapital If you want the first letter of the kebab-case to be capital. default `true`
+ * @returns {string} `Kebab-Case` string.
+ */
+let snakeToKebab = (snakeCaseString, isCapital = true) => {
+	return constantToKebab(snakeCaseToArray(snakeCaseString), isCapital);
+}
+
+/**
+ * A method for converting snake_case or Snake_Case string to PascalCase string.
+ * @param {string} snakeCaseString snake_case string for converting in PascalCase.
+ * @returns {string} `PascalCase` string.
+ */
+let snakeToPascal = (snakeCaseString) => {
+	return constantToPascal(snakeCaseToArray(snakeCaseString));
 }
 
 module.exports = {
@@ -318,5 +369,10 @@ module.exports = {
 	pascalToCapital,
 	pascalToConstant,
 	pascalToKebab,
-	pascalToSnake
+	pascalToSnake,
+	snakeToCamel,
+	snakeToCapital,
+	snakeToConstant,
+	snakeToKebab,
+	snakeToPascal
 }
