@@ -16,7 +16,7 @@ The one case string converts the below to all the categories. Follow the further
 - [CONSTANT_CASE](#CONSTANT_CASE)
 - [Kebab-Case](#Kebab-Case)
 - [PascalCase](#PascalCase)
-- [Snake_Case]()
+- [Snake_Case](#Snake_Case)
 
 
 ### camelCase
