@@ -314,5 +314,62 @@ console.log(pascalToSnake("IsAnString", false));
 ```
 <br>
 
+### Snake_Case
+In this category, all the method converts the Snake_Case string to another category string.
+
+```javascript
+const {
+	snakeToCamel,
+	snakeToCapital,
+	snakeToConstant,
+	snakeToPascal,
+	snakeToKebab
+} = require("case-shift");
+```
+
+- <b>snakeToCamel</b><br>
+This method converts Snake_Case string to camelCase case. If second optional argument is true return `UpperCamelCase` string, default `false`.
+```javascript
+console.log(snakeToCamel("is_an_string"));
+// isAnString
+console.log(snakeToCamel("is_an_string", true));
+// IsAnString
+```
+<br>
+
+- <b>snakeToCapital</b><br>
+This method converts Snake_Case string to Capital Case string.
+```javascript
+console.log(snakeToCapital("is_an_string"));
+// Is An String
+```
+<br>
+
+- <b>snakeToConstant</b><br>
+This method converts Snake_Case string to CONSTANT_CASE string.
+```javascript
+console.log(snakeToConstant("is_an_string"));
+// IS_AN_STRING
+```
+<br>
+
+- <b>snakeToPascal</b><br>
+This method converts Snake_Case string to pascal case.
+```javascript
+console.log(snakeToPascal("is_an_string"));
+// IsAnString
+```
+<br>
+
+- <b>snakeToKebab</b><br>
+This method converts Snake_Case string to kebab-case. If the second argument is true, returns capital Kebab-Case string, else small kebab-case string. Defaults are `true`.
+```javascript
+console.log(snakeToKebab("is_an_string"));
+// Is-An-String
+console.log(snakeToKebab("is_an_string", false));
+// is-an-string
+```
+<br>
+
 <hr>
-The module is under construction please give your essential contribution to it. 🚧
+💻 Thank You!
