@@ -38,7 +38,7 @@
 				"pascalToSnake"
 		],
 		"author": "Suryapratap Singh Suryavanshi <suryprtaps@gmail.com> (https://github.com/suryapratapsinghsuryavanshi)",
-		"license": "ISC",
+		"license": "MIT",
 		"bugs": {
 				"url": "https://github.com/suryapratapsinghsuryavanshi/case-shift/issues"
 		},
